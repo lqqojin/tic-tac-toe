@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends Component {
+class Square extends React.Component {
 	render() {
 		return (
 			<button className="square">
@@ -12,7 +12,7 @@ class Square extends Component {
 	}
 }
 
-class Board extends Component {
+class Board extends React.Component {
 	renderSquare(i) {
 		return <Square />;
 	}
@@ -43,7 +43,7 @@ class Board extends Component {
 	}
 }
 
-class Game extends Component {
+class Game extends React.Component {
 	render() {
 		return (
 			<div className="game">
@@ -59,4 +59,9 @@ class Game extends Component {
 	}
 }
 
-ReactDOM.render(<Game />, document.getElementById('root'));
+// ========================================
+
+ReactDOM.render(
+	<Game />,
+	document.getElementById('root')
+);
